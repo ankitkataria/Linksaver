@@ -1,0 +1,20 @@
+{
+    "name":"kataria/mvc",
+    "description":"Linksaver using MVC architecture",
+    "require":{
+        "torophp/torophp":"dev-master",
+        "twig/twig":"1.*"
+    },
+    "authors":[
+    {
+        "name":"Ankit Kataria",
+        "email":"ankitkataria28@gmail.com"
+    }
+        ],
+            "autoload":{
+                "psr-4":{
+                    "Blog\\Controllers\\":"app/controllers",
+                    "Blog\\Models\\":"app/models"
+                }
+            }
+}

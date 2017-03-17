@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+{% block content %}
+<form class="post" method="post" action="/register">
+	<label for="user">Username :</label>
+	<input type="text" id="user" name="user"><br>
+
+	<label for="pass">Password :</label>
+	<input type="password" name="pass" id="pass"><br>
+
+	<label for="pass_check">Retype Pass:</label>
+	<input type="password" name="pass_check" id="pass_check"><br>
+	<input type="submit" value="submit"><br>
+</form>
+
+{% endblock %}
