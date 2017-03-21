@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %} Profile Page {% endblock %}
+{% block content %}
+<h3> Hello Mr. {{currUser}}!</h3>
+<table>
+	<tr>
+		<th> links</th>
+		<th> Discription</th>
+	</tr>
+	<form method="post" action="/logout">
+		<input type="submit" name="logout" value="Logout">
+	</form>
+</table>
+{% endblock %}

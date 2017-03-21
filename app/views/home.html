@@ -2,6 +2,7 @@
 
 {% block title %}Home{% endblock %}
 {% block content %}
+<h3>Register</h3>
 <form class="post" method="post" action="/register">
 	<label for="user">Username :</label>
 	<input type="text" id="user" name="user"><br>
@@ -11,7 +12,15 @@
 
 	<label for="pass_check">Retype Pass:</label>
 	<input type="password" name="pass_check" id="pass_check"><br>
-	<input type="submit" value="submit"><br>
+	<input type="submit" name="btn" value="Register"><br>
+</form>
+<h3>Login</h3>
+<form class="post" method="post" action="/login">
+	<label for="user_login"> UserName</label>
+	<input type="text" id="user_login" name="user_login"><br>
+	<label for="pass_login"> Password </label>
+	<input type="password" id="pass_login" name="pass_login"><br>
+	<input type="submit" name="btn" value="Login"><br>
 </form>
 
 {% endblock %}
