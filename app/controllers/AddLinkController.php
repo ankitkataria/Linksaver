@@ -7,8 +7,13 @@ class AddLinkController extends BaseController{
 		$link=$_POST['link'];
 		$link_des=$_POST['link_des'];
 		$user=$_SESSION['curr_user'];
+
 		$msg=Link::insertLink($user,$link,$link_des);
-		$this->render("error.html",['errMsg'=>$msg]);
+		if($msg=="done")
+			header ("Location:/home");
+		else
+			$this->render("error.html",['errMsg'=>$msg]);
+
 	}
 }
 ?>
