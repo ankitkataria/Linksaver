@@ -2,13 +2,20 @@
 {% block title %} Profile Page {% endblock %}
 {% block content %}
 <h3> Hello Mr. {{currUser}}!</h3>
+
+<form method="post" action="/logout">
+	<input type="submit" name="logout" value="Logout">
+</form>
+<form method="post" action="/addlink">
+		<lable for="link">Link</lable>
+		<input type="text" name="link" id="link">
+		<lable for="link_des"> Description </lable>
+		<input type="text" name="link_des">
+		<input type="submit" value="Submit">
+</form>
 <table>
-	<tr>
-		<th> links</th>
-		<th> Discription</th>
-	</tr>
-	<form method="post" action="/logout">
-		<input type="submit" name="logout" value="Logout">
-	</form>
-</table>
+	{{linksTable|raw}}
+</table>	
+	
+
 {% endblock %}

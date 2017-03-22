@@ -1,6 +1,7 @@
 <?php
 	namespace Blog\Controllers;
 	use Blog\Models\Post;
+	use Blog\Models\Link;
 	session_start();
 
 	class LoginController extends BaseController{
@@ -18,7 +19,9 @@
 			{
 				$_SESSION['curr_user']=$user_login;
 				//echo $_SESSION['curr_user'];
-				$this->render("profile.html",["currUser"=>$user_login]);
+				$linksTable=Link::getLinks($_SESSION['curr_user']);
+				//echo "table for links: $linksTable";
+				$this->render("profile.html",["currUser"=>$user_login,'linksTable'=>$linksTable]);
 			}
 			else
 			{
