@@ -9,5 +9,6 @@ Toro::serve(array(
     '/home' => Blog\Controllers\HomeController::class,
     '/register' => Blog\Controllers\RegisterController::class,
     '/login'=> Blog\Controllers\LoginController::class,
+    '/logout'=>Blog\Controllers\LogoutController::class,
 ));
 

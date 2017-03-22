@@ -71,6 +71,8 @@ class Post{
 		//echo $user.$stmt->rowCount();
 		if($stmt->rowCount()==1)
 		{
+			session_start();
+			$_SESSION['curr_user']=$user;
 			return true;
 		}	
 		return false;
